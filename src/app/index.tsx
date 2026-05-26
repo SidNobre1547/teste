@@ -1,9 +1,12 @@
+import { DrawerItem } from "@react-navigation/drawer";
+import { dismissBrowser } from "expo-web-browser";
 import { useState } from "react";
 import { Button, FlatList, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function Index() {
   const [tarefas, setTarefas] = useState<{ id: number; titulo: string; concluido: boolean }[]>([]);
   const [novaTarefa, setNovaTarefa] = useState("");
+  const [Filtro, setFiltro] = useState
 
   function adicionarTarefa() {
     setTarefas((prev) => [
@@ -18,8 +21,8 @@ export default function Index() {
   }
 
   function toggleTarefa(id: number) {
-    setTarefas((prev) =>
-      prev.map((tarefa) => (tarefa.id === id ? { ...tarefa, concluido: !tarefa.concluido } : tarefa)),
+    const tarefa = tarefas.find(DrawerItem.id = id);
+    db
     );
   }
 
